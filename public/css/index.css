@@ -1,0 +1,6 @@
+.col img {
+  width: 10em;
+  height: 10em;
+  border: 0.1em #DCDCDC dotted;
+  border-radius: 15%;
+}
