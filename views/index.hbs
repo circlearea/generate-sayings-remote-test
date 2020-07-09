@@ -1,37 +1,59 @@
 <div class="container">
+
   <div class="row d-flex justify-content-center align-items-center h3" style="height: 4em">你想對誰說幹話?</div>
-  <form action="">
+
+  <form action="/sayings" method="GET">
+
     <div class="row d-flex flex-row justify-content-center">
-      <div class="col d-flex flex-column align-items-center">
-        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" alt="">
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="engineerRadio" value="option1">
-          <label class="form-check-label" for="engineerRadio">工程師
-          </label>
+
+      <div class="col form-check">
+        <div class="card border-0 bg-transparent">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+            class="card-img-top mx-auto" alt="">
+          <div class="card-body mx-auto">
+            <input class="form-check-input" type="radio" name="occupation" id="engineerRadio" value="engineer"
+              {{#if_checked occupation 'engineer'}} checked {{/if_checked}}>
+            <label class="form-check-label text-black-50" for="engineerRadio">工程師
+            </label>
+          </div>
         </div>
       </div>
-      <div class="col d-flex flex-column align-items-center">
-        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" alt="">
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="designerRadio" value="option2">
-          <label class="form-check-label" for="designerRadio">設計師</label>
+
+      <div class="col form-check">
+        <div class="card border-0 bg-transparent">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+            class="card-img-top mx-auto" alt="">
+          <div class="card-body mx-auto">
+            <input class="form-check-input" type="radio" name="occupation" id="designerRadio" value="designer"
+              {{#if_checked occupation 'designer'}} checked {{/if_checked}}>
+            <label class="form-check-label text-black-50" for="designerRadio">設計師
+            </label>
+          </div>
         </div>
       </div>
-      <div class="col d-flex flex-column align-items-center">
-        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" alt="">
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="entrepreneurRadio" value="option3">
-          <label class="form-check-label" for="entrepreneurRadio">創業家</label>
+
+      <div class="col form-check">
+        <div class="card border-0 bg-transparent">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+            class="card-img-top mx-auto" alt="">
+          <div class="card-body mx-auto">
+            <input class="form-check-input" type="radio" name="occupation" id="entrepreneurRadio" value="entrepreneur"
+              {{#if_checked occupation 'entrepreneur'}} checked {{/if_checked}}>
+            <label class="form-check-label text-black-50" for="entrepreneurRadio">創業家
+            </label>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row d-flex flex-row align-items-center justify-content-center" style="height: 12em">
+
+      <div class="w-100" style="height: 1em"></div>
+
       <div class="col-2">
-        <button class="btn btn-info" type="submit">產生幹話</button>
+        <button class="btn btn-info mt-3" type="submit">產生幹話</button>
       </div>
-      <div class="col-8 alert alert-secondary text-center" role="alert" style="height: 5em">
-        <span class="align-middle">幹話文字</span>
+      <div class="col-8 alert alert-secondary text-center text-wrap" role="alert" style="height: 6.5em">
+        <span class="align-middle h2 font-weight-bold">{{#if sayings}}{{sayings}}{{/if}}</span>
       </div>
     </div>
+
   </form>
 </div>
