@@ -13,7 +13,7 @@
           <div class="card-body mx-auto">
             <input class="form-check-input" type="radio" name="occupation" id="engineerRadio" value="engineer"
               {{#if_checked occupation 'engineer'}} checked {{/if_checked}}>
-            <label class="form-check-label text-black-50" for="engineerRadio">工程師
+            <label class="form-check-label text-secondary" for="engineerRadio">工程師
             </label>
           </div>
         </div>
@@ -26,7 +26,7 @@
           <div class="card-body mx-auto">
             <input class="form-check-input" type="radio" name="occupation" id="designerRadio" value="designer"
               {{#if_checked occupation 'designer'}} checked {{/if_checked}}>
-            <label class="form-check-label text-black-50" for="designerRadio">設計師
+            <label class="form-check-label text-secondary" for="designerRadio">設計師
             </label>
           </div>
         </div>
@@ -39,7 +39,7 @@
           <div class="card-body mx-auto">
             <input class="form-check-input" type="radio" name="occupation" id="entrepreneurRadio" value="entrepreneur"
               {{#if_checked occupation 'entrepreneur'}} checked {{/if_checked}}>
-            <label class="form-check-label text-black-50" for="entrepreneurRadio">創業家
+            <label class="form-check-label text-secondary" for="entrepreneurRadio">創業家
             </label>
           </div>
         </div>
@@ -47,11 +47,12 @@
 
       <div class="w-100" style="height: 1em"></div>
 
-      <div class="col-2">
-        <button class="btn btn-info mt-3" type="submit">產生幹話</button>
+      <div class="col-2 d-flex align-items-center ">
+        <button class="btn btn-info" type="submit">產生幹話</button>
       </div>
-      <div class="col-8 alert alert-secondary text-center text-wrap" role="alert" style="height: 6.5em">
-        <span class="align-middle h2 font-weight-bold">{{#if sayings}}{{sayings}}{{/if}}</span>
+      <div class="col-8 alert alert-dark text-center text-wrap d-flex align-items-center justify-content-center"
+        role="alert" style="height: 8em"> <span class="align-middle h2 font-weight-bolder">
+          {{#if sayings}}{{sayings}}{{/if}}</span>
       </div>
     </div>
 

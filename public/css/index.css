@@ -1,6 +1,15 @@
 .col img {
   width: 10em;
   height: 10em;
-  border: 0.1em #DCDCDC dotted;
+  border: 0.1em grey dotted;
   border-radius: 15%;
 }
+
+body {
+  background-image: url("/img/white-wallpaper-surface-blank-rough-wall.jpg");
+  background-size: cover;
+}
+/* 
+* {
+  border: 1px black solid
+} */
